@@ -1,0 +1,4 @@
+target 'ExampleApp' do
+    pod 'RxBluetoothKit', :path => '../'
+    pod 'RxSwift'
+end
