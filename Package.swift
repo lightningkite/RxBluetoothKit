@@ -13,13 +13,13 @@ let package = Package(
         .library(name: "RxBluetoothKit", targets: ["RxBluetoothKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0")),
+        .package(url: "https://github.com/lightningkite/RxSwift.git", exact: "6.2.4-LK"),
     ],
     targets: [
         .target(
             name: "RxBluetoothKit",
             dependencies: [
-                "RxSwift",
+                .product(name: "RxSwift", package: "RxSwift")
             ],
             path: ".",
             exclude: [
